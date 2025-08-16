@@ -1,0 +1,18 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+.tickets-price {
+    background-color: #333;
+    color: #fff;
+    padding: 16px 40px;
+}
+tr:hover {
+    background-color: rgb(233, 226, 216);
+}
