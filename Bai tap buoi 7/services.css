@@ -1,0 +1,42 @@
+* {
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+.container {
+    max-width: 80%;
+    padding-left: 30%;
+}
+.container span {}
+.container h1 {
+    text-align: center;
+    font-size: 2.5rem;
+}
+.container .join {
+    text-align: center;
+    font-size: 0.8rem;
+    padding-bottom: 20px;
+}
+.services {
+    margin: 0 auto;
+    text-align: center;
+    padding: 40px;
+    display: inline-block;
+    width: 30%;
+}
+.container .services h3 {
+    font-size: 1.5rem;
+}
+.container .services a {
+    text-decoration: none;
+    color: white;
+    background-color: #243992;
+    display: inline-block;
+    padding: 10px 20px;
+}
+.container .services a:hover {
+    background-color: #ff5e57;
+}
+.container .services .icon-large {
+    font-size: 3rem ;
+}
