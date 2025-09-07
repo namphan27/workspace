@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/ex02.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="landing">
+        <div class="landing-decoration"></div>
+      <input type="radio" id="login" name="tab" checked/>
+      <input type="radio" id="register" name="tab" />
+
+      <div class="landing-info">
+        <div class="landing-logo">
+          <img
+            src="https://chibichamp.github.io/F8_TD/Bai_Tap_Ve_Nha/Day_11/images/image-vikinger-logo.png"
+            alt=""
+          />
+        </div>
+        <!-- End .landing-logo-->
+        <h2 class="landing-pretitle">Welcome to</h2>
+        <h1 class="landing-title">Vikinger</h1>
+        <p class="landing-text">
+          The next generation social network & community! Connect with your
+          friends and play with our quests and badges gamification system!
+        </p>
+        <div class="tab-switch">
+          <label for="login">Login</label>
+          <label for="register">Register</label>
+        </div>
+        <!-- End .tab-switch -->
+      </div>
+      <!-- End .landing-info-->
+      <div class="landing__form--parent">
+        <div class="landing-form login-form">
+          <h2 class="form-title">Account Login</h2>
+          <form class="form">
+            <div class="form-row">
+              <div class="form-item">
+                <div class="form-input">
+                  <input
+                    type="text"
+                    name="login-username"
+                    id="login-username"
+                    placeholder=""
+                  />
+                  <label for="login-username">Username or Email</label>
+                </div>
+                <!-- End .form-input-->
+              </div>
+              <!-- End .form-item-->
+            </div>
+            <!-- End .form-row-->
+            <div class="form-row">
+              <div class="form-item">
+                <div class="form-input">
+                  <input
+                    type="password"
+                    name="login-password"
+                    id="login-password"
+                    placeholder=""
+                  />
+                  <label for="login-password">Password</label>
+                </div>
+                <!-- End .form-input-->
+              </div>
+              <!-- End .form-item-->
+            </div>
+            <!-- End .form-row-->
+            <div class="form-row remember">
+              <div class="form-item">
+                <div class="checkbox-wrap">
+                  <input type="checkbox" id="login-remember" />
+                  <span></span>
+                  <label for="login-remember">Remember Me</label>
+                </div>
+              </div>
+              <!-- End .form-item -->
+              <div class="form-item">
+                <a class="form-link" href="#"> Forgot Password? </a>
+              </div>
+              <!-- End .form-item -->
+            </div>
+            <!-- End .form-row .remember-->
+            <div class="form-row">
+              <div class="form-item">
+                <button class="button-medium">Login to your Account!</button>
+              </div>
+              <!-- End .form-item -->
+            </div>
+            <!-- End .form-row-->
+          </form>
+          <!-- End .form-->
+          <p class="login-text">Login to your Social Account</p>
+          <div class="social-link">
+            <i class="fa-brands fa-square-facebook icon-social fa-2x"></i>
+            <i class="fa-brands fa-square-twitter icon-social fa-2x"></i>
+            <i class="fa-brands fa-twitch icon-social fa-2x"></i>
+            <i class="fa-brands fa-youtube icon-social fa-2x"></i>
+          </div>
+        </div>
+        <!-- End .landing-form-->
+        <div class="landing-form register-form">
+          <h2 class="form-title">Create your Account!</h2>
+          <form class="form">
+            <div class="form-row">
+              <div class="form-item">
+                <div class="form-input">
+                  <input
+                    type="email"
+                    name="login-email"
+                    id="login-email"
+                    placeholder=""
+                  />
+                  <label for="login-username">Your Email</label>
+                </div>
+                <!-- End .form-input-->
+              </div>
+              <!-- End .form-item-->
+            </div>
+            <!-- End .form-row-->
+            <div class="form-row">
+              <div class="form-item">
+                <div class="form-input">
+                  <input
+                    type="text"
+                    name="login-username"
+                    id="login-username"
+                    placeholder=""
+                  />
+                  <label for="login-username">Username</label>
+                </div>
+                <!-- End .form-input-->
+              </div>
+              <!-- End .form-item-->
+            </div>
+            <!-- End .form-row-->
+            <div class="form-row">
+              <div class="form-item">
+                <div class="form-input">
+                  <input
+                    type="password"
+                    name="login-password"
+                    id="login-password"
+                    placeholder=""
+                  />
+                  <label for="login-password">Password</label>
+                </div>
+                <!-- End .form-input-->
+              </div>
+              <!-- End .form-item-->
+            </div>
+            <!-- End .form-row-->
+            <div class="form-row">
+              <div class="form-item">
+                <div class="form-input">
+                  <input
+                    type="password"
+                    name="login-password"
+                    id="login-password"
+                    placeholder=""
+                  />
+                  <label for="login-password">Repeat Password</label>
+                </div>
+                <!-- End .form-input-->
+              </div>
+              <!-- End .form-item-->
+            </div>
+            <div class="checkbox-wrap">
+              <input type="checkbox" id="login-remember" hidden />
+              <span></span>
+              <label for="login-remember"
+                >Send me news and updates via email</label
+              >
+            </div>
+            <!-- End .form-row-->
+            <div class="form-row">
+              <div class="form-item">
+                <button class="button-medium" style="background-color: #23d2e2">
+                  Register Now!
+                </button>
+                <p class="login-text2">
+                  You'll receive a confirmation email in your inbox with a link
+                  to activate you account. If you have any problems,
+                  <u>contact us</u>!
+                </p>
+              </div>
+              <!-- End .form-item -->
+            </div>
+
+            <!-- End .form-row-->
+          </form>
+          <!-- End .form-->
+        </div>
+      </div>
+      <!-- End .landing-form-->
+    </div>
+    <!-- End .landing-->
+  </body>
+</html>
