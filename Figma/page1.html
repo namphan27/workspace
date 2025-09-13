@@ -12,17 +12,122 @@
 </head>
 <body>
     <input type="checkbox" hidden id="nav-department">
+    <input type="checkbox" hidden id="nav-grocery">
+    <input type="checkbox" hidden id="nav-beauty">
     <header class="header">
         <div class="top-bar">
+            <input type="checkbox" hidden id="menu-mobile-btn">
+            <div class="menu-mobile">
+                <label for="menu-mobile-btn"><img src="./img/Document.svg" alt=""></label>
+            </div>
             <div class="logo">
                 <img src="./img/Icon.svg" alt="">
                 <h3 class="logo-text">grocerymart</h3>
             </div>
             <div class="nav">
+                <div class="arrow-left">
+                    <label for="menu-mobile-btn"><img src="./img/Arrow - Left.svg" alt=""></label>
+                </div>
+                <div class="heart-icon-mobile">
+                    <div class="heart">
+                        <div class="">
+                            <img src="./img/Heart.svg" alt="">
+                            <span class="heart-mobile">Card</span>
+                        </div>
+                        <span>3</span>
+                    </div>
+                    <div class="buy">
+                        <div class="">
+                            <img src="./img/Buy.svg" alt="">
+                            <span class="buy-mobile">Favorite</span>
+                        </div>
+                        <span>3</span>
+                    </div>
+                </div>
                 <ul>
-                    <li><label for="nav-department">Department</label> <i class="fa-solid fa-chevron-down arrow fa-sm"></i></li>
-                    <li><a href="#">Grocery</a> <i class="fa-solid fa-chevron-down arrow fa-sm"></i></li>
-                    <li><a href="#">Beauty </a><i class="fa-solid fa-chevron-down arrow fa-sm" ></i></li>
+                    <li>
+                        <label for="nav-department">Department</label> <i class="fa-solid fa-chevron-down arrow fa-sm"></i>
+                        <ul class="menu-department-mobile">
+                            <li><a href="#">Saving & Featured Shops</a></li>
+                            <li class="menu-item">
+                                <input type="checkbox" id="electronics" hidden>
+                                <label for="electronics">Electronics</label>
+                                <ul class="menu-electronics">
+                                    <li><h4>TV & Video</h4></li>
+                                    <li><a href="#">Shop all TVs</a></li>
+                                    <li><a href="#">TVs by Size</a></li>
+                                    <li><a href="#">Smart TVs</a></li>
+                                    <li><a href="#">Roku TVs</a></li>
+                                    <li><a href="#">Streaming</a></li>
+                                    <li><a href="#">TV Mounts & Accessories</a></li>
+                                    <li><a href="#"></a>DVD & Blu-Ray Players</li>
+                                </ul>
+                                <ul class="menu-electronics">
+                                    <li><h4>Wearable Technology</h4></li>
+                                    <li><a href="#">Galaxy Watch</a></li>
+                                    <li><a href="#">Apple Watch</a></li>
+                                    <li><a href="#">Fitness Trackers</a></li>
+                                    <li><a href="#">Virtual Reality</a></li>
+                                    <li><a href="#">Headphones</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">Clothing, Shoes & Accessories</a></li>
+                            <li><a href="#">Home, Funiture & Appliances</a></li>
+                            <li><a href="#">Toys & Video Games</a></li>
+                            <li><a href="#">Home Improvement</a></li>
+                            <li><a href="#">Baby</a></li>
+                            <li><a href="#">Household Essentials</a></li>
+                            <li><a href="#">Personal Care</a></li>
+                            <li><a href="#">Patio & Garden</a></li>
+                            <li><a href="#">Sport % Outdoors</a></li>
+                            <li><a href="#">Gift Cards</a></li>
+                            <li><a href="#">Auto, Tires and Industrial</a></li>
+                            <li><a href="#">Movies, Music & Books</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <label for="nav-grocery">Grocery</label> <i class="fa-solid fa-chevron-down arrow fa-sm"></i>
+                        <ul class="menu-grocery-mobile">
+                            <li><h4>Grocery</h4></li>
+                            <li><a href="#">Shop All</a></li>
+                            <li><a href="#">Grilling Foods</a></li>
+                            <li><a href="#">Spring Flavors</a></li>
+                        </ul>
+                        <ul class="menu-grocery-mobile">
+                            <li><h4>Fresh Product</h4></li>
+                            <li><a href="#">Shop All</a></li>
+                            <li><a href="#">Celebrate Salad Month</a></li>
+                            <li><a href="#">Healthy Living </a></li>
+                            <li><a href="#">Fresh Flowers</a></li>
+                            <li><a href="#">Chilled Dressing</a></li>
+                            <li><a href="#">Fresh Fruit</a></li>
+                            <li><a href="#">Salad Kits & Bowls</a></li>
+                            <li><a href="#">Organic Produce</a></li>
+                            <li><a href="#">Fresh Vegetables</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <label for="nav-beauty">Beauty </label>
+                        <i class="fa-solid fa-chevron-down arrow fa-sm" ></i>
+                        <ul class="menu-beauty-mobile">
+                            <li><h4>Featured Shops</h4></li>
+                            <li><a href="#">Pickup Today in Beauty</a></li>
+                            <li><a href="#">BeautySpaceNK</a></li>
+                            <li><a href="#">Equate Beauty</a></li>
+                            <li><a href="#">Beauty Deals</a></li>
+                            <li><a href="#">Walmart Exclusives</a></li>
+                            <li><a href="#">Luxury Beauty Deals</a></li>
+                            <li><a href="#">New Arrivals</a></li>
+                        </ul>
+                        <ul class="menu-beauty-mobile">
+                            <li><h4>Trending in Beauty</h4></li>
+                            <li><a href="#">Trending Beauty Products</a></li>
+                            <li><a href="#">Celebrate Earth Day</a></li>
+                            <li><a href="#">Prom-ready Beauty</a></li>
+                            <li><a href="#">Summer Beauty</a></li>
+                            <li><a href="#">Travel Size & Minis</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
             <div class="icon-nav">
@@ -32,22 +137,26 @@
                 <div class="heart-icon">
                     <div class="heart">
                         <img src="./img/Heart.svg" alt="">
-                        <span>03</span>
+                        <span class="heart-desktop">03</span>
+                        <span class="heart-mobile">Card</span>
                     </div>
                     <div class="buy">
                         <img src="./img/Buy.svg" alt="">
-                        <span>$65.42</span>
+                        <span class="buy-desktop">$65.42</span>
+                        <span class="buy-mobile">Favorite</span>
                     </div>
                 </div>
                 <img src="./img/Avatar.png" alt="">
             </div>
+            <label for="menu-mobile-btn" class="overlay-mobile"></label>
         </div>
     </header>
+    <div class="menu">
     <div class="menu-department">
+        <div class="menu-column">
         <img src="./img/Polygon 1.svg" alt="" class="img-polygon1">
         <img src="./img/Ellipse 2.svg" alt="" class="img-ellipse">
         <img src="./img/Category.svg" alt="" class="img-category">
-        <div class="menu-column">
             <h4>All Department</h4>
             <ul>
                 <li><a href="#">Saving & Featured Shops</a></li>
@@ -79,6 +188,8 @@
                 <li><a href="#">TV Mounts & Accessories</a></li>
                 <li><a href="#">DVD & Blu-Ray Players</a></li>
             </ul>
+            <img src="./img/Star 1.svg" alt="" class="img-star">
+            <img src="./img/Game.svg" alt="" class="img-game-star">
             <h4>Wearable Technology</h4>
             <ul>
                 <li><a href="#">Galaxy Watch</a></li>
@@ -88,9 +199,9 @@
                 <li><a href="#">Headphones</a></li>
             </ul>
         </div>
-        <img src="./img/Star 1.svg" alt="" class="img-star">
-        <img src="./img/Game.svg" alt="" class="img-game-star">
         <div class="menu-column">
+            <img src="./img/Polygon 2.svg" alt="" class="img-polygon">
+            <img src="img/monitor 1.svg" alt="" class="img-monitor">
             <h4>Computers</h4>
             <ul>
                 <li><a href="#">Shop All Computers</a></li>
@@ -107,19 +218,17 @@
                 <li><a href="#">PC Finder</a></li>
             </ul>
         </div>
-        <img src="./img/Polygon 2.svg" alt="" class="img-polygon">
-        <img src="img/monitor 1.svg" alt="" class="img-monitor">
-        <img src="./img/Ellipse 2 (2).svg" alt="" class="img-ellipse2">
-        <img src="./img/pocket 1.svg" alt="" class="img-pocket">
-        <img src="./img/Polygon 2 (1).svg" alt="" class="img-polygon2">
-        <img src="./img/smartphone 1.svg" alt="" class="img-smartphone">
         <div class="menu-column">
+            <img src="./img/Ellipse 2 (2).svg" alt="" class="img-ellipse2">
+            <img src="./img/pocket 1.svg" alt="" class="img-pocket">
             <h4>Savings</h4>
             <ul>
                 <li><a href="#">Tech Savings</a></li>
                 <li><a href="#">Overstock Savings</a></li>
                 <li><a href="#">Tech Rollbacks</a></li>
             </ul>
+            <img src="./img/Polygon 2 (1).svg" alt="" class="img-polygon2">
+            <img src="./img/smartphone 1.svg" alt="" class="img-smartphone">
             <h4>Cell Phones</h4>
             <ul>
                 <li><a href="#">Wireless Deals</a></li>
@@ -133,18 +242,206 @@
             </ul>
   </div>
     </div>
+        <div class="menu-grocery">
+        <div class="menu-column">
+            <img src="./img/Polygon 1.svg" alt="" class="img-grocery">
+            <div class="purple-grocery"></div>
+            <img src="./img/Buy.svg" alt="" class="img-buy-grocery">
+            <h4>Grocery</h4>
+            <ul>
+                <li><a href="#">Shop All</a></li>
+                <li><a href="#">Grilling Foods</a></li>
+                <li><a href="#">Spring Flavours</a></li>
+            </ul>
+            <img src="./img/Star 1.svg" alt="" class="img-star-grocery">
+            <img src="./img/Group.svg" alt="" class="img-tomato">
+            <h4>Fresh Produce</h4>
+            <ul>
+                <li><a href="#">Shop All</a></li>
+                <li><a href="#">Celebrate Salad Month</a></li>
+                <li><a href="#">Healthy Living</a></li>
+                <li><a href="#">Fresh Flowers</a></li>
+                <li><a href="#">Chilled Dressing</a></li>
+                <li><a href="#">Fresh Fruit</a></li>
+                <li><a href="#">Salad Kits & Bowls</a></li>
+                <li><a href="#">Organic Produce</a></li>
+                <li><a href="#">Fresh Vegetables</a></li>
+            </ul>
+        </div>
+        <div class="menu-column">
+            <img src="./img/Polygon 2 (2).svg" alt="" class="img-polygon-grocery">
+            <img src="./img/bread.svg" alt="" class="img-bread">
+            <h4>Bakery & Bread</h4>
+            <ul>
+                <li><a href="#">Shop All</a></li>
+                <li><a href="#">New in Bakery</a></li>
+                <li><a href="#">Sliced Bread</a></li>
+                <li><a href="#">Rolls & Buns</a></li>
+                <li><a href="#">Tortillas</a></li>
+                <li><a href="#">Breakfast Bread</a></li>
+                <li><a href="#">Pies</a></li>
+                <li><a href="#">Cookies & Brownies</a></li>
+            </ul>
+            <img src="./img/Polygon 2 (3).svg" alt="" class="img-frozen">
+            <img src="./img/Group (1).svg" alt="" class="img-breakfast">
+            <h4>Frozen</h4>
+            <ul>
+                <li><a href="#">Frozen Breakfast</a></li>
+                <li><a href="#">Frozen Potatoes</a></li>
+                <li><a href="#">Frozen Meals & Snacks</a></li>
+            </ul>
+        </div>
+        <div class="menu-column">
+            <img src="./img/Ellipse 2 (3).svg" alt="" class="img-snack">
+            <img src="./img/Group (2).svg" alt="" class="img-snack2">
+            <h4>Snacks</h4>
+            <ul>
+                <li><a href="#">Shop All</a></li>
+                <li><a href="#">Chips</a></li>
+                <li><a href="#">Popcorn & Pretzels</a></li>
+                <li><a href="#">Cracker</a></li>
+                <li><a href="#">Salsa & Dips</a></li>
+            </ul>
+            <img src="./img/Polygon 2 (4).svg" alt="" class="img-candy">
+            <img src="./img/Group (3).svg" alt="" class="img-candy2">
+            <h4>Candy</h4>
+            <ul>
+                <li><a href="#">Shop All</a></li>
+                <li><a href="#">Better For You</a></li>
+                <li><a href="#">Chocolate</a></li>
+                <li><a href="#">Sugar Free Candy</a></li>
+                <li><a href="#">Gum</a></li>
+                <li><a href="#">Mints</a></li>
+                <li><a href="#">On-the-Go</a></li>
+            </ul>
+        </div>
+        <div class="menu-column">
+            <img src="./img//Ellipse 2 (4).svg" alt="" class="img-cooktails">
+            <img src="./img/coffee 1.svg" alt="" class="img-coffee">
+            <h4>Cooktails & Mixes Coffee</h4>
+            <ul>
+                <li><a href="#">Ground Coffee</a></li>
+                <li><a href="#">Whole Bean Coffee</a></li>
+                <li><a href="#">Coffee Pods</a></li>
+                <li><a href="#">Instant Coffee</a></li>
+            </ul>
+            <h4>Beverages</h4>
+            <img src="./img/Polygon 2 (5).svg" alt="" class="img-beverages">
+            <img src="./img/Group (4).svg" alt="" class="img-beverages2">
+            <ul>
+                <li><a href="#">Shop All</a></li>
+                <li><a href="#">Water</a></li>
+                <li><a href="#">Soft Drinks</a></li>
+                <li><a href="#">Fruit Juice</a></li>
+                <li><a href="#">Sports Drinks</a></li>
+                <li><a href="#">Energy Drinks</a></li>
+                <li><a href="#">Tea</a></li>
+                <li><a href="#">Hot Chocolate & Cocoa</a></li>
+            </ul>
+        </div>
+    </div>
+     <div class="menu-beauty">
+        <div class="menu-column">
+            <img src="./img/Polygon 1.svg" alt="" class="img-polygon-white">
+            <div class="purple-grocery"></div>
+            <img src="./img/Buy.svg" alt="" class="img-buy-grocery">
+            <h4>Featured Shops</h4>
+            <ul>
+                <li><a href="#">Pickup Today in Beauty</a></li>
+                <li><a href="#">BeautySpaceNK</a></li>
+                <li><a href="#">Equate Beauty</a></li>
+                <li><a href="#">Beauty Deals</a></li>
+                <li><a href="#">Walmart Exclusives</a></li>
+                <li><a href="#">Luxyry Beauty Deals</a></li>
+                <li><a href="#">New Arrivals</a></li>
+            </ul>
+            <img src="./img/Star 1 (1).svg" alt="" class="img-star-beauty">
+            <img src="./img/Group (5).svg" alt="" class="img-group-beauty">
+            <h4>Trending in Beauty</h4>
+            <ul>
+                <li><a href="#">Trending Beauty Product</a></li>
+                <li><a href="#">Celebrate Earth Day</a></li>
+                <li><a href="#">Prom-ready Beauty</a></li>
+                <li><a href="#">Summer Beauty</a></li>
+                <li><a href="#">Travel Size & Minis</a></li>
+            </ul>
+        </div>
+        <div class="menu-column">
+            <img src="./img/Polygon 2 (6).svg" alt="" class="img-brands">
+            <img src="./img/Star (2).svg" alt="" class="img-star-brands">
+            <h4>Featured Brands</h4>
+            <ul>
+                <li><a href="#">Shop All</a></li>
+                <li><a href="#">New in Bakery</a></li>
+                <li><a href="#">Sliced Bread</a></li>
+                <li><a href="#">Rolls & Buns</a></li>
+                <li><a href="#">Tortillas</a></li>
+                <li><a href="#">Breakfast Bread</a></li>
+                <li><a href="#">Pies</a></li>
+                <li><a href="#">Cookies & Brownies</a></li>
+            </ul>
+            <img src="./img/Polygon 2 (7).svg" alt="" class="img-support">
+            <img src="./img/Group (1).svg" alt="" class="img-support2">
+            <h4>Communities to Support</h4>
+            <ul>
+                <li><a href="#">Black Owned Beauty</a></li>
+                <li><a href="#">LatinX Owned Beauty</a></li>
+                <li><a href="#">AAPI Owned Beauty</a></li>
+            </ul>
+        </div>
+        <div class="menu-column">
+            <img src="./img/Polygon 2 (8).svg" alt="" class="img-polygon-premium">
+            <img src="./img/premium.svg" alt="" class="img-premium">
+            <h4>Premiums Beauty</h4>
+            <ul>
+                <li><a href="#">Shop All</a></li>
+                <li><a href="#">Hair Color</a></li>
+                <li><a href="#">Hair Care</a></li>
+                <li><a href="#">Skincare</a></li>
+                <li><a href="#">Fragrance</a></li>
+                <li><a href="#">Makeup</a></li>
+                <li><a href="#">Beauty Tech & Tools</a></li>
+            </ul>
+        </div>
+        <div class="menu-column">
+            <img src="./img/Ellipse 2 (5).svg" alt="" class="img-beauty">
+            <img src="./img/Group (6).svg" alt="" class="img-woman">
+            <h4>Beauty</h4>
+            <ul>
+                <li><a href="#">Shop All</a></li>
+                <li><a href="#">Men's Grooming</a></li>
+                <li><a href="#">Bath & Body</a></li>
+                <li><a href="#">Beauty Tech & Tools</a></li>
+                <li><a href="#">Makeup</a></li>
+                <li><a href="#">Fragrance</a></li>
+                <li><a href="#">Nail Care</a></li>
+                <li><a href="#">Hair Care</a></li>
+                <li><a href="#">Skincare</a></li>
+            </ul>
+        </div>
+    </div>
+    <label for="nav-department" class="overlay-department"></label>
+    <label for="nav-grocery" class="overlay-grocery"></label>
+    <label for="nav-beauty" class="overlay-beauty"></label>
+    </div>
     <div class="banner">
         <h2 class="banner-title">ORDER YOUR <br> FAVORITE COFFEE</h2>
-        <!-- <div class="line">
-            <img src="./img/Ellipse 60.svg" alt="">
-            <img src="./img/Ellipse 60.svg" alt="">
-        </div> -->
+        <div class="line">
+            <span class="number1">1</span>
+            <img src="./img/Ellipse 60.svg" alt="" class="line1">
+            <span class="line-row"></span>
+            <img src="./img/Ellipse 60.svg" alt="" class="line2">
+            <span class="number5">5</span>
+        </div>
         <img src="./img/mk-2-qG0ZWwd53Jk-unsplash 1.png" class="banner1" alt="">
         <img src="./img/mk-2-qG0ZWwd53Jk-unsplash02 1.png" class="banner2" alt="">
         <div class="banner3">
             <svg xmlns="http://www.w3.org/2000/svg" width="522" height="335" viewBox="0 0 522 335" fill="none">
             <path d="M522 315V0L0 175.765V217.089L219.65 335H502C513.046 335 522 326.046 522 315Z" fill="#F1FEFF"/>
             </svg>
+            </div>
+            <div class="banner4">
+                <img src="./img/Vector 4.svg" alt="">
             </div>
     </div>
     <h2 class="browse-categories">Browse Categories</h2>
@@ -171,7 +468,74 @@
             </div>
         </div>
     </section>
-    <h2 class="product-total">Total LavAzza 1320</h2>
+    <input type="checkbox" id="filter-btn" hidden>
+    <div class="filter">
+        <h2 class="product-total">Total LavAzza 1320</h2>
+        <div class="filter-btn">
+            <label for="filter-btn">Filter</label>
+            <img src="./img/Filter.svg" alt="">
+        </div>
+    </div>
+    <div class="filter-container">
+        <img src="./img/Polygon 1.svg" alt="" class="img-polygon">
+        <h3>Filter</h3>
+        <div class="filter-section">
+            <div class="filter-group">
+            <h4>Price</h4>
+            <div class="range-slider">
+                <img src="./img/oval - UIHUT.svg" alt="" class="img-slider">
+                <span></span>
+                <img src="./img/oval - UIHUT.svg" alt="" class="img-slider1">
+            </div>
+            <div class="price-input">
+                <div class="min">
+                    <span>Minimum</span>
+                    <p>$30.00</p>
+                </div>
+                <div class="max">
+                    <span>Maximum</span>
+                    <P>$100.00</P>
+                </div>
+            </div>
+            </div>
+            <div class="filter-group">
+                <h4>Size/Weight</h4>
+                <div class="size-selector">
+                    <div class="size">
+                        <span>500g</span>
+                        <img src="./img/Arrow - Down 2.svg" alt="">
+                    </div>
+                    <div class="weight">
+                        <span>Gram</span>
+                        <img src="./img/Arrow - Down 2.svg" alt="">
+                    </div>
+                </div>
+                <div class="size-buttons">
+                        <span class="size-tags">Small</span>
+                        <span class="size-tags">Medium</span>
+                        <span class="size-tags">Large</span>
+                    </div> 
+            </div>
+            <div class="filter-group">
+                <h4>Brand</h4>
+                <div class="brands-search">
+                    <input type="text" placeholder="Search brand name">
+                    <img src="./img/Search.svg" alt="">
+                </div>
+                <div class="brands-tags">
+                    <span>Lavazza</span>
+                    <span>Nescafe</span>
+                    <span>Starbucks</span>
+                </div>
+            </div>
+        </div>
+         <div class="filter-actions">
+                <button class="cancel-btn">Cancel</button>
+                <button class="btn-show-result">Show Result</button>
+            </div>
+            
+    </div>
+    <label for="filter-btn" class="overlay-btn"></label>
     <section class="product-introduction">
         <div class="product-card">
             <div class="product-img">
