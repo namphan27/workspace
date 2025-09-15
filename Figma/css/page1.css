@@ -15,13 +15,11 @@ body {
    .header {
     max-width: 100%;
     height: auto;
-    border: 1px solid;
     padding: 30px 50px;
-    background: var(--Background-3, #EEE);
+    background: #eee;
 }
 .header .top-bar {
     display: flex;
-    /* width: 1340px; */
     height: 50px;
     margin: 0 auto;
     justify-content: space-between;
@@ -29,16 +27,12 @@ body {
     background: #EEE;
 }
 .header .top-bar .logo .logo-text {
-    font-family: Gordita;
     font-size: 22px;
-    font-style: normal;
     font-weight: 700;
     line-height: 32px;
 }
 .header .top-bar .nav ul li {
-    font-family: Gordita;
     font-size: 15px;
-    font-style: normal;
     font-weight: 500;
     line-height: 22px;
 }
@@ -57,10 +51,6 @@ body {
 .buy .buy-mobile {
     display: none;
 }
-/* .heart-mobile,
-.buy-mobile {
-    display: none;
-} */
 .header .menu-mobile {
     display: none;
 }
@@ -99,7 +89,7 @@ body {
 .header .icon-nav .search-icon {
     padding: 13px;
     border-radius: 8px;
-    background: var(--Secondary-Color-Background, #FFF);
+    background: #fff;
     box-shadow: 0 20px 60px 10px rgba(237, 237, 246, 0.20);
 }
 .header .icon-nav .heart-icon {
@@ -107,7 +97,7 @@ body {
     border-radius: 8px;
     display: flex;
     gap: 30px;
-    background: var(--Secondary-Color-Background, #FFF);
+    background: #fff;
     box-shadow: 0 20px 60px 10px rgba(237, 237, 246, 0.20);
 }
 img {
@@ -146,15 +136,13 @@ img {
     width: 30px;
     height: 30px;
     border-radius: 5px;
-    background: var(--Purple-Purple-70, linear-gradient(0deg, rgba(255, 255, 255, 0.30) 0%, rgba(255, 255, 255, 0.30) 100%), #7644E1);
+    background: #7644E1;
 }
 .menu-department {
-    /* display: none; */
     visibility: hidden;
     opacity: 0;
 }
 #nav-department:checked ~ .menu > .menu-department {
-    /* display: flex; */
     visibility: visible;
     opacity: 1;
 }
@@ -514,7 +502,7 @@ img {
     position: relative;
     gap: 40px;
     background: #77DAE6;
-    width: 1340px;
+    width: 90%;
     height: 455px;
     flex-shrink: 0;
     border-radius: 20px;
@@ -824,6 +812,17 @@ img {
     border-radius: 10px;
     padding: 16px;
 }
+.product-introduction .product-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.product-introduction .product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2); 
+}
 .product-introduction .product-card .product-details .product-title {
     font-size: 16px;
     font-weight: 500;
@@ -895,8 +894,6 @@ img {
     .header .top-bar .nav {
         display: flex;
         flex-direction: column;
-        /* justify-content: space-around; */
-        /* align-items: center; */
         position: absolute;
         background: #fff;
         width: 285px;
@@ -907,7 +904,6 @@ img {
         z-index: 99;
         padding: 20px;
         transition: all 0.3s ease;
-        /* overflow: hidden; */
     }
     .menu-department-mobile {
         position: relative;
