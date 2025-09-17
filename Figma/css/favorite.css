@@ -1,0 +1,210 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #f6f6f6;
+    font-family: Gordita;
+}
+@font-face {
+    font-family: "Gordita";
+    src: url(../fonts/Gordita-Medium.otf);
+}
+@media screen and (min-width:1200px) {
+    .header {
+    max-width: 100%;
+    height: auto;
+    padding: 30px 50px;
+    background: #eee;
+}
+.logo a {
+    text-decoration: none;
+    color: #1A162E;
+}
+.header .top-bar {
+    display: flex;
+    height: 50px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    background: #EEE;
+}
+.header .top-bar .logo .logo-text {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 32px;
+}
+.header .top-bar .nav ul li {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+.arrow-left {
+    display: none;
+}
+.heart-icon-mobile {
+    display: none;
+}
+.heart-icon .heart-mobile,
+.buy .buy-mobile {
+    display: none;
+}
+.header .menu-mobile {
+    display: none;
+}
+.header .logo {
+    display: flex;
+    gap: 10px;
+}
+.header .icon-nav span {
+    font-family: Gordita;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    padding: 10px;
+}
+.header .nav ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 30px;
+    margin-right: 300px;
+}
+.header .nav ul li {
+    list-style: none;
+}
+.header .nav ul li a {
+    text-decoration: none;
+    color: #1A162E;
+}
+.header .icon-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+.header .icon-nav .search-icon {
+    padding: 13px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 20px 60px 10px rgba(237, 237, 246, 0.20);
+}
+.header .icon-nav .heart-icon {
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: flex;
+    gap: 30px;
+    background: #fff;
+    box-shadow: 0 20px 60px 10px rgba(237, 237, 246, 0.20);
+}
+.breadcrumb {
+    display: flex;
+    width: 90%;
+    padding: 20px 725px 20px 20px;
+    align-items: center;
+    margin: 30px auto;
+    gap: 10px;
+    background: #eee;
+    box-shadow: 0 20px 60px 10px rgba(237, 237, 246, 0.20);
+    border-radius: 10px
+}
+.breadcrumb a {
+    text-decoration: none;
+    color: #9E9DA8;
+}
+.product-coffee {
+    display: flex;
+    flex-direction: column;
+    margin: 30px auto;
+    width: 80%;
+    height: 854px;
+}
+.product-coffee .product-card {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #D2D1D6;
+    width: 100%;
+    height: 172px;
+    flex: 1 1 100%;
+}
+.product-coffee .product-card .coffee-beans {
+    width: 100%;
+    padding: 20px;
+}
+.product-coffee .product-card .coffee-beans .price {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+.product-coffee .product-card .coffee-beans .price span {
+    display: flex;
+    align-items: center;
+}
+.product-coffee .product-card .coffee-beans .price2 span:nth-child(1) {
+    color: #9E9DA8;
+    border-right: 1px solid #9E9DA8;
+    padding-right: 10px;
+}
+.product-coffee .product-card .coffee-beans .price2 span:nth-child(2) {
+    color: #67B044;
+}
+.product-coffee .product-card .coffee-beans .lavazza {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.product-coffee .product-card .coffee-beans .lavazza2 {
+    display: flex;
+    align-items: center;
+}
+
+.product-coffee .product-card .coffee-beans .lavazza2 .lavazza-1 {
+    border: 1px solid #D2D1D6;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+.product-coffee .product-card .coffee-beans .lavazza2 .lavazza-2 {
+    border: 1px solid #D2D1D6;
+    padding: 10px 20px;
+    border-radius: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.product-coffee .product-card .coffee-beans .lavazza2 span:nth-child(2) img {
+    margin: 0 10px;
+}
+.product-coffee .product-card .coffee-beans .lavazza3 {
+    display: flex;
+    gap: 20px;
+}
+.product-coffee .product-card .coffee-beans .lavazza3 span {
+    color: #9E9DA8;
+    border: none;
+}
+.product-coffee .shoppingg {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+.shoppingg a {
+    text-decoration: none;
+    color: #1A162E;
+    background: #FFB700;
+    padding: 18px 40px;
+    border-radius: 50px;
+    user-select: none;
+}
+.check-out {
+    text-decoration: none;
+    color: #1A162E;
+    background: #FFB700;
+    user-select: none;
+    padding: 18px 30px;
+    border-radius: 50px;
+}
+}

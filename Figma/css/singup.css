@@ -1,0 +1,210 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #fff;
+    font-family: Gordita;
+    height: 100vh;
+}
+@font-face {
+    font-family: "Gordita";
+    src: url(../fonts/Gordita-Medium.otf);
+}
+@media screen and (min-width:1200px) {
+    .login {
+        display: flex;
+        width: 90%;
+        justify-content: space-between;
+        margin: 2% auto;
+    }
+    .login .what {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* position: absolute;
+        top: 50%; */
+        gap: 30px;
+        width: 1440px;
+        height: 100%;
+        margin-top: 14%;
+    }
+    .login .sign-in {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        width: 720px;
+        height: 100%;
+        flex-shrink: 0;
+    }
+    .login .sign-in .logo {
+        margin: 30px auto;
+        
+    }
+    .login .sign-in .logo a {
+        text-decoration: none;
+        color: #1A162E;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    .login .sign-in h2 {
+        text-align: center;
+    }
+    .login .sign-in p {
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 22px;
+        color: #9E9DA8;
+        width: 560px;
+        text-align: center;
+    }
+    .login .sign-in input {
+        width: 436px;
+        height: 50px;
+        margin: 10px;
+        border-radius: 10px;
+        border: 1px solid #D2D1D6;
+    }
+    .login .sign-in .email {
+        position: relative;
+
+    }
+    .login .sign-in .email label {
+        position: absolute;
+        top: 20px;
+        left: 27px;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 26px;
+        color: #D2D1D6;
+    }
+    .login .sign-in .email img {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+    }
+    .login .sign-in .password {
+        position: relative;
+    }
+    .login .sign-in .password label {
+        font-size: 18px;
+        position: absolute;
+        top: 20px;
+        left: 27px;
+        font-weight: 500;
+        line-height: 26px;
+        color: #D2D1D6;
+    }
+    .login .sign-in .password img {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+    }
+    .login .sign-in .confirm-password {
+        position: relative;
+    }
+    .login .sign-in .confirm-password label {
+        font-size: 18px;
+        position: absolute;
+        top: 20px;
+        left: 27px;
+        font-weight: 500;
+        line-height: 26px;
+        color: #D2D1D6;
+    }
+    .login .sign-in .confirm-password img {
+        position: absolute;
+        top: 25px;
+        right: 25px;
+    }
+    .login .sign-in label {
+        /* font-size: 18px;
+        font-weight: 500;
+        line-height: 26px;
+        color: #D2D1D6; */
+    }
+    .recovery {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 60%;
+    }
+    .recovery a:nth-child(1) {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        gap: 10px;
+        color: #9E9DA8;
+    }
+    .recovery a:nth-child(2) {
+        text-decoration: none;
+        color: #0071DC;
+    }
+    .btn-login {
+        text-decoration: none;
+        color: #1A162E;
+        text-align: center;
+        background: #FFB700;
+        border-radius: 10px;
+        border: none;
+        user-select: none;
+        width: 470px;
+        padding: 12px 204px;
+    }
+    .btn-email {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        width: 460px;
+        padding: 12px 145px;
+        border-radius: 10px;
+        color: #1A162E;
+        border: 1px solid #D2D1D6;
+    }
+    .forget {
+        display: flex;
+        width: 60%;
+        justify-content: space-between;
+    }
+    .forget p {
+        color: #9E9DA8;
+        font-family: Gordita;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 26px;
+    }
+    .forget a {
+        text-decoration: none;
+        color: #0071DC;
+    }
+    .login .sign-in .form .email input:focus + label,
+    .login .sign-in .form .email input:not(:placeholder-shown) + label {
+        top: -10%;
+        background: #fff;
+        color: #000;
+        padding: 0 12px;
+        border-radius: 8px;
+        transition: all 0.3s
+    }
+    .login .sign-in .form .password input:focus + label,
+    .login .sign-in .form .password input:not(:placeholder-shown) + label {
+        top: -10%;
+        background: #fff;
+        color: #000;
+        padding: 0 12px;
+        border-radius: 8px;
+        transition: all 0.3s
+    }
+    .login .sign-in .form .confirm-password input:focus + label,
+    .login .sign-in .form .confirm-password input:not(:placeholder-shown) + label {
+        top: -10%;
+        background: #fff;
+        color: #000;
+        padding: 0 12px;
+        border-radius: 8px;
+        transition: all 0.3s
+    }
+}

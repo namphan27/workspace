@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="apple-touch-icon" sizes="57x57" href="./favicon/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./favicon/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="./favicon/apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./favicon/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./favicon/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./favicon/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="./favicon/apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./favicon/apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicon/apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="./favicon/android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./favicon/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./favicon/favicon-16x16.png">
+    <link rel="manifest" href="/manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+    <title>Grocerymart</title>
+</head>
+<body>
+    <header class="header">
+        <div class="top-bar">
+            <input type="checkbox" hidden id="menu-mobile-btn">
+            <div class="menu-mobile">
+                <label for="menu-mobile-btn"><img src="./img/Document.svg" alt=""></label>
+            </div>
+            <div class="logo">
+                <img src="./img/Icon.svg" alt="">
+                <a href="./page1.html" class="logo-text">grocerymart</a>
+            </div>
+            <div class="nav">
+                <div class="arrow-left">
+                    <label for="menu-mobile-btn"><img src="./img/Arrow - Left.svg" alt=""></label>
+                </div>
+                <div class="heart-icon-mobile">
+                    <div class="heart">
+                        <div class="">
+                            <img src="./img/Heart.svg" alt="">
+                            <span class="heart-mobile">Card</span>
+                        </div>
+                        <span>3</span>
+                    </div>
+                    <div class="buy">
+                        <div class="">
+                            <img src="./img/Buy.svg" alt="">
+                            <span class="buy-mobile">Favorite</span>
+                        </div>
+                        <span>3</span>
+                    </div>
+                </div>
+                <ul>
+                    <li>
+                        <label for="nav-department">Department</label> <i class="fa-solid fa-chevron-down arrow fa-sm"></i>
+                    <li>
+                        <label for="nav-grocery">Grocery</label> <i class="fa-solid fa-chevron-down arrow fa-sm"></i>
+                    <li>
+                        <label for="nav-beauty">Beauty </label>
+                        <i class="fa-solid fa-chevron-down arrow fa-sm" ></i>
+                    </li>
+                </ul>
+            </div>
+            <div class="icon-nav">
+                <div class="search-icon">
+                    <img src="./img/Search.svg" alt="">
+                </div>
+                <div class="heart-icon">
+                    <div class="heart">
+                        <img src="./img/Heart.svg" alt="">
+                        <span class="heart-desktop">03</span>
+                        <span class="heart-mobile">Card</span>
+                    </div>
+                    <div class="buy">
+                        <label for="btn-shopping-cart"><img src="./img/Buy.svg" alt=""></label>
+                        <span class="buy-desktop">$65.42</span>
+                        <span class="buy-mobile">Favorite</span>
+                    </div>
+                </div>
+                <img src="./img/Avatar.png" alt="">
+            </div>
+            <label for="menu-mobile-btn" class="overlay-mobile"></label>
+        </div>
+    </header>
+    <div class="profile">
+        <div class="avatar">
+            <div class="bio">
+                <img src="./img/Rectangle 39.png" alt="" class="img-background">
+                <div class="name">
+                    <img src="./img/Ellipse 3.svg" alt="" class="img-avatar">
+                    <p>Imran Khan</p>
+                    <span>Registered: 17th May 2022</span>
+                </div>
+            </div>
+            <div class="content">
+                <div class="account">
+                <h4>Manage Account</h4>
+                <a href="#"><img src="./img/Profile.svg" alt="">Personal info</a>
+                <a href="#"><img src="./img/Location.svg" alt="">Addresses</a>
+                <a href="#"><img src="./img/Message.svg" alt="">Communications & privacy</a>
+            </div>
+            <div class="item">
+                <h4>My items</h4>
+                <a href="#"><img src="./img/Downlaod.svg" alt="">Reorder</a>
+                <a href="#"><img src="./img/Heart.svg" alt="">Lists</a>
+                <a href="#"><img src="./img/gift.svg" alt="">Registries</a>
+            </div>
+            <div class="subscriptions">
+                <h4>Subscriptions & plans</h4>
+                <a href="#"><img src="./img/Shield Done.svg" alt="">Protection plans</a>
+            </div>
+            <div class="customer">
+                <h4>Customer Services</h4>
+                <a href="#"><img src="./img/Info Square.svg" alt="">Help</a>
+                <a href="#"><img src="./img/Danger Circle.svg" alt="">Terms of Use</a>
+            </div>
+        </div>
+            </div>
+
+        <input type="checkbox" id="add-card" hidden>
+        <div class="my-wallet">
+            <h2>My Wallet</h2>
+            <p>Payment methods</p>
+            <div class="card">
+                <img src="./img/card1.png" alt="">
+                <img src="./img/card2.png" alt="">
+                <div class="add-new-card">
+                    <label for="add-card"><img src="./img/Plus (2).svg" alt=""></label>
+                    <p>Add New Card</p>
+                </div>
+            </div>
+            <h2>Account info</h2>
+            <p>Addresses, contact information and password</p>
+            <div class="row">
+                <div class="email">
+                <img src="./img/Message.svg" alt="">
+                <div class="email-address">
+                    <p>Email Address</p>
+                    <span>tarek97.ta@gmail.com</span>
+                </div>
+            </div>
+
+            <div class="phone">
+                <img src="./img/Calling.svg" alt="">
+                <div class="phone-number">
+                    <p>Phone number</p>
+                    <span>+000 11122 2345 657</span>
+                </div>
+            </div>
+            </div>
+             <div class="address">
+                <img src="./img/Location.svg" alt="">
+                <div class="add-address">
+                    <p>Add an Address</p>
+                    <span>Bangladesh Embassy, Washington, DC 20008</span>
+                </div>
+            </div>
+            <h2>List</h2>
+            <p>2 items - Primary</p>
+            <div class="list">
+                <div class="coffee-beans">
+                    <img src="./img/Rectangle 35.png" alt="">
+                    <div class="price">
+                        <p>Coffee Beans - Espresso Arabica and Robusta Beans</p>
+                        <div class="btn">
+                            <span>$47.00</span>
+                            <a href="#">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="coffee-beans">
+                    <img src="./img/Rectangle 35 (1).png" alt="">
+                    <div class="price">
+                        <p>Lavazza Coffee Blends - Try the Italian Espresso</p>
+                        <div class="btn">
+                            <span>$53.00</span>
+                            <a href="#">Add to cart</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <input type="checkbox" id="save-card" hidden>
+        <div class="add-card-credit">
+            <a href="#" class="out"><img src="./img/Arrow - Left.svg" alt=""> Add credit or debit card</a>
+            <div class="form">
+                <div class="name">
+                    <label for="first-name">First Name</label>
+                    <input type="text" id="first-name" placeholder="Imran">
+                </div>
+                <div class="name">
+                    <label for="last-name">Last Name</label>
+                    <input type="text" id="last-name" placeholder="Khan">
+                </div>
+            </div>
+
+            <div class="form">
+                <div class="card-infomation">
+                    <label for="infomation">Card Information</label>
+                    <input type="text" id="infomation" placeholder="Card Number">
+                </div>
+                <div class="card-infomation">
+                    <label for="date">Expiration Date</label>
+                    <input type="text" id="date" placeholder="MM/YY">
+                </div>
+            </div>
+
+            <div class="form">
+                <div class="phone">
+                    <label for="cvv">CVV</label>
+                    <input type="number" id="cvv" placeholder="123">
+                </div>
+                <div class="phone">
+                    <label for="phone-numer">Last Name</label>
+                    <input type="number" id="phone-number" placeholder="017">
+                </div>
+            </div>
+            <h3>Card Preferences</h3>
+            <a href="#" class="check"><img src="./img/Tick Square (1).svg" alt="">Set as default card</a>
+            <div class="save">
+                <p>Cancel</p>
+                <label for="save-card">Save Card</label>
+            </div>
+        </div>
+
+        
+        <div class="personal">
+            <a href="#" class="out-personal"><img src="./img/Arrow - Left.svg" alt=""> Personal info</a>
+            <div class="form-personal">
+                <div class="name">
+                    <label for="full-name">Full Name</label>
+                    <input type="text" id="first-name" placeholder="Imran Khan">
+                </div>
+                <div class="name">
+                    <label for="email-address">Email Address</label>
+                    <input type="email" id="email-address" placeholder="admin@uihut.com">
+                </div>
+            </div>
+
+
+            <div class="form-personal">
+                <div class="phone">
+                    <label for="phone-numer">Phone number</label>
+                    <input type="number" id="phone-number" placeholder="+008 01234 56789">
+                </div>
+                <div class="phone">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" placeholder="•••••••••">
+                </div>
+                
+            </div>
+            <div class="save-edit">
+                <p>Cancel</p>
+                <a href="#">Save Edit</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

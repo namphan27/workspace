@@ -7,6 +7,11 @@ body {
     background: #f6f6f6;
     font-family: Gordita;
 }
+html, body {
+  height: 100%;
+  overflow-y: auto;
+  overscroll-behavior-y: none; 
+}
 @font-face {
     font-family: "Gordita";
     src: url(../fonts/Gordita-Medium.otf);
@@ -46,6 +51,10 @@ body {
 }
 .heart-icon-mobile {
     display: none;
+}
+.logo a {
+    text-decoration: none;
+    color: #1A162E;
 }
 .heart-icon .heart-mobile,
 .buy .buy-mobile {
@@ -608,6 +617,7 @@ img {
     width: 1060px;
     height: 362px;
     flex-shrink: 0;
+    top: 50%;
     margin: 0 auto;
     background: #fff;
     padding: 30px;
@@ -773,6 +783,7 @@ img {
     align-items: center;
     gap: 20px;
     cursor: pointer;
+    user-select: ;
 }
 .filter-container .filter-actions .btn-show-result {
     display: flex;
@@ -788,12 +799,13 @@ img {
     border: none;
     background: #FFB700;
     cursor: pointer;
+    user-select: none;
 }
 .product-introduction {
     display: flex;
     justify-content: space-around;
     gap: 20px;
-    /* margin: 0 auto; */
+    margin: 30px auto;
     background: #F6F6F6;
 }
 .product-introduction .product-img {
@@ -870,6 +882,10 @@ img {
     }
     .nav label {
         margin-left: ;
+    }
+    .logo a {
+        text-decoration: none;
+        color: #1A162E;
     }
     #menu-mobile-btn:checked ~ .nav {
         left: 0;
@@ -1418,7 +1434,7 @@ img {
 }
 @media screen and (max-width:767.98px) {
     .header {
-        max-width: 767px;
+        max-width: 80%;
         /* position: relative; */
     }
     .nav .heart-icon-mobile .heart {
@@ -1954,6 +1970,9 @@ img {
     .product-introduction .product-card .product-quality .product-rating img {
         padding-right: 5px;
     }
+    .logo a {
+        text-decoration: none;
+    }
 }
 @media screen and (max-width:450px) {
     .header {
@@ -1970,6 +1989,10 @@ img {
     }
     .header .nav {
         /* display: none; */
+    }
+    .logo a {
+        text-decoration: none;
+        color: #1A162E;
     }
     .line .line-row {
         display: block;

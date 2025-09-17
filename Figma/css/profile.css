@@ -1,0 +1,401 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #f6f6f6;
+    font-family: Gordita;
+}
+@font-face {
+    font-family: "Gordita";
+    src: url(../fonts/Gordita-Medium.otf);
+}
+@media screen and (min-width:1200px) {
+     .header {
+    max-width: 100%;
+    height: auto;
+    padding: 30px 50px;
+    background: #eee;
+}
+.logo a {
+    text-decoration: none;
+    color: #1A162E;
+}
+.header .top-bar {
+    display: flex;
+    height: 50px;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    background: #EEE;
+}
+.header .top-bar .logo .logo-text {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 32px;
+}
+.header .top-bar .nav ul li {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 22px;
+}
+
+.arrow-left {
+    display: none;
+}
+.heart-icon-mobile {
+    display: none;
+}
+.heart-icon .heart-mobile,
+.buy .buy-mobile {
+    display: none;
+}
+.header .menu-mobile {
+    display: none;
+}
+.header .logo {
+    display: flex;
+    gap: 10px;
+}
+.header .icon-nav span {
+    font-family: Gordita;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 22px;
+    padding: 10px;
+}
+.header .nav ul {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 30px;
+    margin-right: 300px;
+}
+.header .nav ul li {
+    list-style: none;
+}
+.header .nav ul li a {
+    text-decoration: none;
+    color: #1A162E;
+}
+.header .icon-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+.header .icon-nav .search-icon {
+    padding: 13px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 0 20px 60px 10px rgba(237, 237, 246, 0.20);
+}
+.header .icon-nav .heart-icon {
+    padding: 10px 20px;
+    border-radius: 8px;
+    display: flex;
+    gap: 30px;
+    background: #fff;
+    box-shadow: 0 20px 60px 10px rgba(237, 237, 246, 0.20);
+}
+
+.profile {
+    display: flex;
+    justify-content: space-between;
+    margin: 30px auto;
+    width: 90%;
+}
+.profile .avatar {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 345px;
+    height: 806px;
+    background: #fff;
+    border-radius: 20px;
+}
+.profile .avatar .bio .img-background {
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    z-index: 1;
+}
+.profile .avatar .bio .img-avatar {
+    position: absolute;
+    top: 18px;
+    left: 89px;
+    z-index: 10;
+}
+.profile .avatar .bio p {
+    position: absolute;
+    color: #fff;
+    top: 165px;
+    left: 128px;
+    z-index: 5;
+}
+.profile .avatar .bio span {
+    position: absolute;
+    color: #fff;
+    top: 191px;
+    left: 62px;
+    z-index: 5;
+}
+.profile .content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 80%;
+    gap: 20px;
+    padding: 10px 20px;
+}
+.profile .content .account,
+.profile .content .item,
+.profile .content .subscriptions,
+.profile .content .customer  {
+    display: flex;
+    flex-direction: column;
+}
+.profile .content .account a,
+.profile .content .item a,
+.profile .content .subscriptions a,
+.profile .content .customer a  {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px;
+    text-decoration: none;
+    color: #1A162E;
+}
+.profile .my-wallet {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    width: 70%;
+    border-radius: 10px;
+    padding: 20px;
+}
+.profile .my-wallet .card {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+.profile .my-wallet .card .add-new-card {
+    width: 281px;
+    height: 171px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    border: 1px solid #1A162E;
+    position: relative;
+}
+.profile .my-wallet .card .add-new-card img {
+    position: absolute;
+    top: 41%;
+    left: 45%;
+}
+.profile .my-wallet .card .add-new-card p {
+    position: absolute;
+    top: 60%;
+    left: 29%;
+}
+.profile .my-wallet .row {
+    display: flex;
+    margin-top: 10px;
+    justify-content: space-between;
+}
+.profile .my-wallet .row .email,
+.profile .my-wallet .row .phone {
+    display: flex;
+    width: 49%;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 10px;
+    background: #F6F6F6;
+}
+.profile .my-wallet .row .email img,
+.profile .my-wallet .row .phone img {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+}
+.profile .my-wallet .address {
+    display: flex;
+    margin-top: 10px;
+    width: 49%;
+    padding: 10px;
+    gap: 10px;
+    border-radius: 10px;
+    background: #F6F6F6;
+}
+.profile .my-wallet .address img {
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 8px;
+}
+.profile .my-wallet .list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.profile .my-wallet .list .coffee-beans {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 20px;
+}
+.profile .my-wallet .list .coffee-beans .price p {
+    font-size: 15px;
+    font-weight: 500;
+    line-height: 22px;
+    color: #1A162E;
+}
+.profile .my-wallet .list .coffee-beans .price .btn {
+    padding-top: 20px;
+}
+.profile .my-wallet .list .coffee-beans .price .btn a {
+    text-decoration: none;
+    color: #1A162E;
+    user-select: none;
+    margin-left: 10px;
+    padding: 10px 20px;
+    border-radius: 20px;
+    background: #FFB700;
+}
+
+.profile .my-wallet {
+    /* visibility: hidden; */
+    /* opacity: 0; */
+}
+#add-card:checked ~ .add-card-credit {
+    display: block;
+}
+#add-card:checked ~ .my-wallet {
+    display: none;
+}
+
+.profile .add-card-credit {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #fff;
+    width: 70%;
+    border-radius: 10px;
+    padding: 20px;
+}
+.profile .add-card-credit .form {
+    display: flex;
+    gap: 30px;
+}
+.profile .add-card-credit .form .name,
+.profile .add-card-credit .form .phone,
+.profile .add-card-credit .form .card-infomation {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.profile .add-card-credit .form .name input,
+.profile .add-card-credit .form .phone input,
+.profile .add-card-credit .form .card-infomation input {
+    display: flex;
+    width: 100%;
+    padding: 12px 270px 12px 12px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    border: 1px solid  #D2D1D6;
+}
+.profile .add-card-credit .check {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #1A162E;
+}
+.profile .add-card-credit .save {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+.profile .add-card-credit .out {
+    display: flex;
+    text-decoration: none;
+    color: #1A162E;
+    gap: 10px;
+}
+
+
+#save-card:checked ~ .personal {
+    display: block;
+}
+#save-card:checked ~ .add-card-credit {
+    display: none;
+}
+.profile .add-card-credit .save label {
+    text-decoration: none;
+    color: #1A162E;
+    background: #FFB700;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    user-select: none;
+}
+.profile .add-card-credit {
+    display: none;
+}
+.profile .personal {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background: #fff;
+    width: 70%;
+    border-radius: 10px;
+    padding: 20px;
+}
+.profile .personal {
+    display: none;
+}
+.profile .personal .form-personal {
+    display: flex;
+    gap: 30px;
+}
+.profile .personal .form-personal .name,
+.profile .personal .form-personal .phone {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.profile .personal .form-personal .name input,
+.profile .personal .form-personal .phone input,
+.profile .personal .form-personal .card-infomation input {
+    display: flex;
+    width: 100%;
+    padding: 12px 270px 12px 12px;
+    align-items: center;
+    gap: 10px;
+    border-radius: 10px;
+    border: 1px solid  #D2D1D6;
+}
+.profile .personal .save-edit {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+.profile .personal .save-edit a {
+    text-decoration: none;
+    color: #1A162E;
+    background: #FFB700;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 30px;
+    user-select: none;
+}
+.profile .personal .out-personal {
+    display: flex;
+    text-decoration: none;
+    color: #1A162E;
+    gap: 10px;
+}
+}
