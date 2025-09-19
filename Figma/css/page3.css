@@ -147,10 +147,14 @@ body {
     display: flex;
     justify-content: space-between;
     gap: 10px;
+    margin-bottom: 10px;
 }
 .favorite-coffee .product-coffee .product-card .coffee-beans .price span {
     display: flex;
     align-items: center;
+}
+.favorite-coffee .product-coffee .product-card .coffee-beans .price2 {
+    margin-bottom: 10px;
 }
 .favorite-coffee .product-coffee .product-card .coffee-beans .price2 span:nth-child(1) {
     color: #9E9DA8;

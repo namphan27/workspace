@@ -189,7 +189,7 @@ img {
 .add-to-cart {
     display: flex;
     flex-direction: column;
-    gap: 27px;
+    gap: 20px;
 }
 .add-to-cart .compare {
     display: flex;
@@ -203,12 +203,14 @@ img {
 }
 .add-to-cart .delivery .delivery2 {
     display: flex;
+    align-items: center;
+    gap: 10px;
     font-size: 18px;
     font-weight: 500;
     line-height: 26px
 }
 .add-to-cart .delivery span,
-.add-to-cart .pick-up span,
+.add-to-cart .pick-up span
 {
     font-size: 14px;
     font-weight: 400;
@@ -225,6 +227,9 @@ img {
 }
 .add-to-cart .pick-up .pick-up2 {
     display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
 }
 .price-sale {
     display: flex;
@@ -373,6 +378,9 @@ h3 {
 #btn-shopping-cart:checked ~ .overlay {
     visibility: visible;
     opacity: 1;
+}
+button {
+    cursor: pointer;
 }
 }
 
