@@ -105,19 +105,16 @@ document.body.innerHTML = html;
 
 
 // Bai 8 
-let n3 = 5;
 let num = 1;
-let result = "";
-
-for (let i = 1; i <= n3; i++) {
+let n3 = 5;
+for (let i = 1; i <= n3; i++) {        
   let line = "";
-  for (let j = 1; j <= i; j++) {
-    line += num + " ";
-    num++;
+
+  for (let j = 1; j <= i; j++) {     
+    line += num + " ";               
+    num++;                          
   }
-  result += line + "\n"; 
+
+  console.log(line);          
 }
-
-console.log(result);
-
 
