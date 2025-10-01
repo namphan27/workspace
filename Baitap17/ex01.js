@@ -47,25 +47,37 @@ if (ketQua.hopLe) {
 
 // Bai 3
 const users = ['User 1', 'User 2', 'User 3', 'User 2', 'User 4'];
-let result = '';
-let output = [];
+let result = [];
 for (let i = 0; i < users.length; i++) {
   let user = users[i];
-  if ((',' + result + ',').indexOf(',' + user + ',') === -1) {
-    result += (result ? ',' : '') + user;
-    output.push(user);
+  if (result.indexOf(user) === -1) {
+    result.push(user);
   }
 }
 
-console.log(output);
+console.log(result);
 
 
 // Bai 4 
 const numbers = [5, 2, 1, 9, 8, 0];
-const sorted = numbers.slice().sort((a, b) => b - a);
-const unique = [...new Set(sorted)];
-const secondLargest = unique[1];
-console.log(secondLargest); 
+
+let largestNumber = numbers[0];
+let secondLargestNumber = numbers[0];
+
+for (let i = 1; i < numbers.length; i++) {
+    let currentNumber = numbers[i];
+
+    if (currentNumber > largestNumber) {
+        secondLargestNumber = largestNumber;
+        largestNumber = currentNumber;
+    } else if (currentNumber > secondLargestNumber && currentNumber < largestNumber) {
+        secondLargestNumber = currentNumber;
+    }
+}
+
+console.log("Số lớn thứ hai là:", secondLargestNumber);
+
+
 
 // Bai 5 
 function chenSoVaoMangSapXep(mangSo, soCanChen) {
