@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Validation Form</title>
+  <style>
+    body {
+      background-color: #a855f7;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      font-family: sans-serif;
+      margin: 0;
+    }
+
+    .form-container {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 10px;
+      width: 300px;
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    h2 {
+      margin-bottom: 1.5rem;
+      font-size: 1.25rem;
+      font-weight: bold;
+    }
+
+    label {
+      display: block;
+      margin-bottom: 0.25rem;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.5rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      transition: border-color 0.3s ease;
+      outline: none; 
+    }
+
+    input.error {
+      border-color: red;
+    }
+
+    input.success {
+      border-color: green;
+    }
+
+   
+    input.error:focus {
+      border-color: red;
+      box-shadow: 0 0 3px rgba(255, 0, 0, 0.4);
+    }
+
+    input.success:focus {
+      border-color: green;
+      box-shadow: 0 0 3px rgba(0, 255, 0, 0.4);
+    }
+
+    button {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: #8b5cf6;
+      color: white;
+      font-weight: bold;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #7c3aed;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Create a new account</h2>
+    <form id="registerForm">
+      <label for="username">Username</label>
+      <input type="text" id="username" placeholder="webcrunch" />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="andy@web-crunch.com" />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" />
+
+      <label for="password-confirmation">Password Confirmation</label>
+      <input type="password" id="password-confirmation" />
+
+      <button type="submit">Create account</button>
+    </form>
+  </div>
+
+  <script src="./js/ex01.js"></script>
+</body>
+</html>
