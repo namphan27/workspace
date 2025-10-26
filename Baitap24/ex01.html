@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+/>
+
+ <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-[#8758ff] flex justify-center items-center h-screen">
+  <div class="bg-[#14152e] py-[40px] px-[60px] rounded-xl text-center w-[550px]">
+    <h1 class="text-[32px] text-white mb-[25px]">Get Things Done !</h1>
+    <div>
+      <input class="js-input w-[320px] flex-1 py-[12px] px-[15px] border border-[#4f4792] rounded outline-none transition duration-300 placeholder-[#7c75c3] focus:border-[#7856ff] text-white" type="text" placeholder="What is the task today?" />
+      <button class="js-btn py-[12px] px-[18px] bg-[#6a35ff] border-none text-white cursor-pointer rounded font-medium transition duration-300 hover:bg-[#8856ff]">Add Task</button>
+      <ul class="js-list bg-[#3c1a9f] mb-[10px] py-[10px] px-[15px] rounded flex justify-center items-center text-[18px] hidden"></ul>
+    </div>
+   <ul id="todo-list" class="space-y-3 mt-6">
+  <li class="flex justify-between items-center bg-[#6a35ff] text-white py-3 px-6 rounded-lg shadow-md min-h-[50px]">
+    <span class="text-base"></span>
+    <div class="flex space-x-3">
+      
+      <button class="w-8 h-8 flex justify-center items-center rounded hover:bg-[#8856ff] transition text-white text-lg">
+        <i class="fa-solid fa-pen-to-square"></i>
+      </button>
+      
+      <button class="w-8 h-8 flex justify-center items-center rounded hover:bg-[#8856ff] transition text-white text-lg">
+        <i class="fa-solid fa-trash"></i>
+      </button>
+    </div>
+  </li>
+</ul>
+
+
+    <script src="./ex01.js"></script>
+  </div>
+</body>
+</html>
