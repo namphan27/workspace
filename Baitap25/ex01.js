@@ -77,4 +77,7 @@
       cartDiv.insertAdjacentHTML("beforeend", html);
     }
 
-   
+    window.removeItem = function(index) {
+      cart.splice(index, 1);
+      renderCart();
+    };
