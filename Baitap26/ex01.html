@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .up {
+        color: green;
+      }
+      .down {
+        color: red;
+      }
+      .up,
+      .down {
+        font-size: 0.85rem;
+        cursor: pointer;
+      }
+      .selected {
+        border: 1px dashed green;
+      }
+      ul {
+        list-style: none;
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        border: 1px solid red;
+      }
+      ul li {
+        margin: 10px 0;
+        padding: 5px 10px;
+      }
+      .context-menu {
+        position: absolute;
+        background: #ccc;
+        border: 1px solid #999;
+        display: none;
+        flex-direction: column;
+        z-index: 1000;
+        min-width: 100px;
+      }
+
+      .context-menu div {
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+
+      .context-menu div:hover {
+        background: #999;
+        color: white;
+      }
+
+    </style>
+  </head>
+  <body>
+    <!-- <div id="app">
+      <h2>F8 - DOM</h2>
+    </div>
+    <button>Add</button> -->
+    <ul>
+      <li>Item 1 <span class="up">Up</span> <span class="down">Down</span></li>
+      <li>Item 2 <span class="up">Up</span> <span class="down">Down</span></li>
+      <li>Item 3 <span class="up">Up</span> <span class="down">Down</span></li>
+      <li>Item 4 <span class="up">Up</span> <span class="down">Down</span></li>
+      <li>Item 5 <span class="up">Up</span> <span class="down">Down</span></li>
+    </ul>
+    <script src="js/ex01.js"></script>
+  </body>
+</html>
