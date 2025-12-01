@@ -154,9 +154,9 @@ export const Moods = async () => {
   const moodTags = moods
     .map(
       (mood) => `
-    <button class="bg-gray-600 p-2 rounded-[10px] hover:bg-gray-400 select-none text-white cursor-pointer">
+    <a href="/moods/${mood.slug}" class="bg-gray-600 p-2 rounded-[10px] hover:bg-gray-400 select-none text-white cursor-pointer">
       ${mood.name}
-    </button>
+    </a>
   `
     )
     .join(" ");

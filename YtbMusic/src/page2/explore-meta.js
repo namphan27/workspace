@@ -19,8 +19,6 @@ export const exploreMeta = async () => {
 
 export const MetaList = async () => {
   const data = await exploreMeta();
-  console.log(data);
-  
   const itemsHTML = (data.categories).map(song =>
     `<a href="/explore/categories/${song.slug}" class="js-category-item relative flex items-center space-x-2 p-1 pl-2 rounded-lg hover:bg-gray-500 transition-colors cursor-pointer bg-gray-800" data-slug="${song.slug}">
         <div class="absolute left-0 top-0 h-full w-2 rounded-l-md" style="background-color: ${song.color}"></div>
@@ -42,8 +40,6 @@ export const MetaList = async () => {
 
 export const MetaLine = async () => {
   const data = await exploreMeta();
-  console.log(data);
-  
   const itemsHTML = (data.lines).map(song =>
     `<a href="/explore/categories/${song.slug}" class="js-category-item relative flex items-center space-x-2 p-1 pl-2 rounded-lg hover:bg-gray-500 transition-colors cursor-pointer bg-gray-800" data-slug="${song.slug}">
         <div class="absolute left-0 top-0 h-full w-2 rounded-l-md" style="background-color: ${song.color}"></div>

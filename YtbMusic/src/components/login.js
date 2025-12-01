@@ -116,3 +116,19 @@ export const requestLogin = async (email, password) => {
     return false;
   }
 };
+
+export const LogOut = async () => {
+  try {
+    const response = await axiosInstance.delete("/auth/logout", {
+      headers: {
+        Authorization: `Bearer ${localStorage.getItem("access_token")}`
+      }
+    })
+    localStorage.removeItem("access_token")
+    localStorage.removeItem("refresh_token")
+    // window.location.href = "/login"
+    return response.data
+  } catch (error) {
+    console.log(error);
+  }
+}

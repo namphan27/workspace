@@ -39,7 +39,6 @@ export const chartCountry = async () => {
 
 export const newVideoMusic = async () => {
     const data = await topVideosMusic()
-    console.log(data.items);
     const hits = (data.items)
     .map(
       (hit) => `
@@ -91,7 +90,6 @@ export const newVideoMusic = async () => {
 
 export const chartArtist = async () => {
     const data = await topArtist()
-    console.log(data.items);
     const hits = (data.items)
     .map(
       (hit) => `
@@ -144,7 +142,6 @@ export const chartArtist = async () => {
 
 export const chartArtistCountry = async () => {
     const data = await chartCountry()
-    console.log(data);
     const hits = (data.countries)
     .map(
       (hit) => `

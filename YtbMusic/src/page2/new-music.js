@@ -39,7 +39,6 @@ export const getNewVideos = async () => {
 
 export const newMusic = async () => {
     const data = await getNewMusic()
-    console.log(data.items);
     const hits = (data.items)
     .map(
       (hit) => `
@@ -92,7 +91,6 @@ export const newMusic = async () => {
 
 export const newAlbumDetails = async () => {
     const data = await getNewAlbum()
-    console.log(data);
     const hits = (data.items)
     .map(
       (hit) => `
@@ -144,7 +142,6 @@ export const newAlbumDetails = async () => {
 
 export const newVideoDetails = async () => {
     const data = await getNewVideos()
-    console.log(data);
     const hits = (data.items)
     .map(
       (hit) => `

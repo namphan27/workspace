@@ -12,6 +12,7 @@ import { Library } from "../page/library";
 import { exploreMusic } from "../page2/new-music";
 import { chartVideos } from "../page2/bxh";
 import { MetaDetails } from "../page2/explore-meta";
+import { MoodsList, MoodsList2, MoodsSlug } from "../page2/moods";
 const router = new Navigo("/", { hash: true });
 const initRouter = async () => {
   const page = document.querySelector("#js-body");
@@ -59,6 +60,13 @@ const initRouter = async () => {
       const slug = params.data.slug;
       const html = await CategoryDetail(slug);
       page.innerHTML = html;
+    })
+    .on("/moods/:slug", async (params) => {
+      const slug = params.data.slug;
+      const html = await MoodsSlug(slug)
+      const htmlDetails = await MoodsList(slug)
+      const htmlDetails2 = await MoodsList2(slug)
+      page.innerHTML = html + htmlDetails + htmlDetails2;
     })
     .on("/explore/lines/:slug", async (params) => {
       const slug = params.data.slug;

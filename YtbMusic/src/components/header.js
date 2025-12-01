@@ -1,8 +1,8 @@
 import { axiosInstance } from "../utils/axios";
 // import { getRefreshToken } from "./register";
 const Header = () => {
-  // const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-  // console.log(currentUser);
+  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+  console.log(currentUser);
   return ` <header class="flex fixed items-center justify-between px-9 py-5 bg-black w-full fixed top-0 left-0 z-[99] border-b border-b-gray-500">
     <div class="flex items-center gap-3">
       <button class="text-white text-2xl cursor-pointer" id="openMenu">
@@ -24,9 +24,28 @@ const Header = () => {
       </div>
     </div>
 
-    
-    
+    ${
+  currentUser
+    ? `
+    <div class="flex items-center gap-4">
+      <a href="#" class="text-white text-xl"><i class="fa-solid fa-tv"></i></a>
+      <span class="text-white">Xin chào ${currentUser.name}</span>
+      <i id="profile-user" class="fa-solid fa-user text-white cursor-pointer"></i>
+      <button class="text-white p-1 cursor-pointer">Đăng xuất</button>
+    </div>
+    `
+    : `
+    <div class="flex items-center gap-4">
+      <a href="#" class="text-white text-xl"><i class="fa-solid fa-tv"></i></a>
+      <div class="js-login p-2 bg-white text-black rounded-full">
+        <a href="/login">Đăng nhập</a>
+      </div>
+    </div>
 
+    `
+}
+
+    
   </header>
 
   <aside class="bg-black mt-8 flex flex-col justify-start gap-6 fixed top-14 left-0 p-2 w-25 h-full">
@@ -97,15 +116,15 @@ export const authMe = async () => {
     return response.data;
   } catch (error) {
     console.error(error);
-    localStorage.removeItem("access_token")
-    localStorage.removeItem("refresh_token")
+    // localStorage.removeItem("access_token")
+    // localStorage.removeItem("refresh_token")
     // window.location.href = "/login"
   }
 };
 
 export const refreshToken = async () => {
   try {
-    const refreshToken = getRefreshToken()
+    const refreshToken = localStorage.getItem("refresh_token")
     const response = await axiosInstance.post("./auth/refresh-token", {
       refreshToken: refreshToken,
     }, {
@@ -119,23 +138,3 @@ export const refreshToken = async () => {
     return false;
   }
 }
-
-
-// ${
-//   currentUser
-//     ? `
-//     <div class="flex items-center gap-4">
-//       <a href="#" class="text-white text-xl"><i class="fa-solid fa-tv"></i></a>
-//       <span class="text-white">Xin chào ${currentUser.name}</span>
-//       <i id="profile-user" class="fa-solid fa-user text-white cursor-pointer"></i>
-//     </div>
-//     `
-//     : `
-//     <div class="flex items-center gap-4">
-//       <a href="#" class="text-white text-xl"><i class="fa-solid fa-tv"></i></a>
-//       <div class="js-login p-2 bg-white text-black rounded-full">
-//         <a href="/login">Đăng nhập</a>
-//       </div>
-//     </div>
-//     `
-// }
