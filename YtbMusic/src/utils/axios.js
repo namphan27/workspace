@@ -1,6 +1,6 @@
 import axios from 'axios';
-// import { getAccessToken, getRefreshToken } from '../components/register';
 import { refreshToken } from '../components/header';
+import { LogOutAccount } from '../components/login';
 export const axiosInstance = axios.create({
     baseURL: 'https://youtube-music.f8team.dev/api'
 });
@@ -21,7 +21,13 @@ axiosInstance.interceptors.response.use(
     async (error) => {
         if (error.response && error.response.status === 401) {
             const newToken = await refreshToken() 
+            if (!newToken) {
+                LogOutAccount()
+                return
+            }
+            localStorage.setItem("access_token", newToken)
             console.log(newToken);
+            return axiosInstance(error.config)
         }
         return Promise.reject(error);
     }

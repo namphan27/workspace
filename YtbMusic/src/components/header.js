@@ -1,9 +1,39 @@
 import { axiosInstance } from "../utils/axios";
-// import { getRefreshToken } from "./register";
+
 const Header = () => {
-  const currentUser = JSON.parse(localStorage.getItem("currentUser"));
-  console.log(currentUser);
-  return ` <header class="flex fixed items-center justify-between px-9 py-5 bg-black w-full fixed top-0 left-0 z-[99] border-b border-b-gray-500">
+  let currentUser = null;
+    try {
+      const userFromStorage = localStorage.getItem("currentUser");
+    if (userFromStorage) {
+      currentUser = JSON.parse(userFromStorage);
+    } 
+    } catch (error) {
+      console.log(error);
+      currentUser = null
+    }
+  let userSection = "";
+  if (currentUser && currentUser.name) {
+    userSection = `
+      <div class="flex items-center gap-4">
+        <a href="#" class="text-white text-xl"><i class="fa-solid fa-tv"></i></a>
+        <span class="text-white">Xin chào ${currentUser.name}</span>
+        <i id="profile-user" class="fa-solid fa-user text-white cursor-pointer"></i>
+        <button id="logout-btn" class="text-white p-1 cursor-pointer">Đăng xuất</button>
+      </div>
+    `;
+  } else {
+    userSection = `
+      <div class="flex items-center gap-4">
+        <a href="#" class="text-white text-xl"><i class="fa-solid fa-tv"></i></a>
+        <div class="js-login p-2 bg-white text-black rounded-full">
+          <a href="/login">Đăng nhập</a>
+        </div>
+      </div>
+    `;
+  }
+
+  return `
+  <header class="flex fixed items-center justify-between px-9 py-5 bg-black w-full top-0 left-0 z-[99] border-b border-b-gray-500">
     <div class="flex items-center gap-3">
       <button class="text-white text-2xl cursor-pointer" id="openMenu">
         <i class="fa-solid fa-bars"></i>
@@ -19,33 +49,12 @@ const Header = () => {
         <input 
           type="text" 
           placeholder="Tìm bài hát, đĩa nhạc, nghệ sĩ, podcast"
-          class="w-full bg-transparent outline-none text-gray-200 placeholder-gray-400"
+          class="js-search w-full bg-transparent outline-none text-gray-200 placeholder-gray-400"
         >
       </div>
     </div>
 
-    ${
-  currentUser
-    ? `
-    <div class="flex items-center gap-4">
-      <a href="#" class="text-white text-xl"><i class="fa-solid fa-tv"></i></a>
-      <span class="text-white">Xin chào ${currentUser.name}</span>
-      <i id="profile-user" class="fa-solid fa-user text-white cursor-pointer"></i>
-      <button class="text-white p-1 cursor-pointer">Đăng xuất</button>
-    </div>
-    `
-    : `
-    <div class="flex items-center gap-4">
-      <a href="#" class="text-white text-xl"><i class="fa-solid fa-tv"></i></a>
-      <div class="js-login p-2 bg-white text-black rounded-full">
-        <a href="/login">Đăng nhập</a>
-      </div>
-    </div>
-
-    `
-}
-
-    
+    ${userSection}
   </header>
 
   <aside class="bg-black mt-8 flex flex-col justify-start gap-6 fixed top-14 left-0 p-2 w-25 h-full">
@@ -105,7 +114,6 @@ const Header = () => {
 };
 export default Header;
 
-
 export const authMe = async () => {
   try {
     const response = await axiosInstance.get("/auth/me", {
@@ -124,17 +132,78 @@ export const authMe = async () => {
 
 export const refreshToken = async () => {
   try {
-    const refreshToken = localStorage.getItem("refresh_token")
-    const response = await axiosInstance.post("./auth/refresh-token", {
-      refreshToken: refreshToken,
-    }, {
-      headers: {
-        "Content-Type": "application/json",
+    const refreshToken = localStorage.getItem("refresh_token");
+    const response = await axiosInstance.post(
+      "./auth/refresh-token",
+      {
+        refreshToken: refreshToken,
       },
-    })
-    return response.data
+      {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    );
+    return response.data;
   } catch (error) {
     console.log(error);
     return false;
   }
-}
+};
+
+
+// export const initProfileModal = () => {
+//   const profileUser = document.getElementById("profile-user");
+//   if (!profileUser) return;
+
+//   let modal = document.querySelector("#profile-modal");
+//   if (!modal) {
+//     modal = document.createElement("div");
+//     modal.id = "profile-modal";
+//     modal.className = "hidden fixed top-20 right-10 w-64 bg-black text-white p-4 rounded shadow-lg z-50";
+//     modal.innerHTML = `
+//       <h3 class="text-lg font-bold mb-2">Thông tin cá nhân</h3>
+//       <ul class="text-sm">
+//         <li class="py-1 px-2 hover:bg-gray-700 rounded cursor-pointer">Hồ sơ của tôi</li>
+//         <li id="change-password-btn" class="py-1 px-2 hover:bg-gray-700 rounded cursor-pointer">Đổi mật khẩu</li>
+//         <li id="logout-btn" class="py-1 px-2 hover:bg-gray-700 rounded cursor-pointer">Đăng xuất</li>
+//       </ul>
+//     `;
+//     document.body.appendChild(modal);
+//   }
+
+//   // Toggle modal
+//   profileUser.addEventListener("click", () => {
+//     modal.classList.toggle("hidden");
+//   });
+
+//   // Đóng modal khi click ra ngoài
+//   document.addEventListener("click", (e) => {
+//     if (!modal.contains(e.target) && e.target !== profileUser) {
+//       modal.classList.add("hidden");
+//     }
+//   });
+// };
+
+
+// export const Search = async ({ q, limit = 20, page = 1 }) => {
+//   if (!q) return { total: 0, results: [] };
+
+//   try {
+//     const response = await axiosInstance.get(`/search`, {
+//       params: { q, limit, page }
+//     });
+//     return response.data; 
+//   } catch (error) {
+//     console.error(error);
+//     return { total: 0, results: [] };
+//   }
+// };
+
+// const addSearchEvent = () => {
+//   const searchEl = document.querySelector(".js-search")
+//   searchEl.addEventListener("input", async (e) => {
+//     const value = e.target.value
+//     const data = await Search({ q: value, limit: 10, page: 1 })
+//   })
+// }

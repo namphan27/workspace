@@ -126,9 +126,23 @@ export const LogOut = async () => {
     })
     localStorage.removeItem("access_token")
     localStorage.removeItem("refresh_token")
-    // window.location.href = "/login"
     return response.data
   } catch (error) {
     console.log(error);
   }
 }
+
+
+export const LogOutAccount = () => {
+  document.addEventListener("click", async (e) => {
+    if (e.target.id === "logout-btn") {
+
+      const res = await LogOut(); 
+
+      localStorage.removeItem("currentUser");
+      localStorage.removeItem("access_token")
+      localStorage.removeItem("refresh_token")
+      window.location.href = "/";
+    }
+  });
+};
