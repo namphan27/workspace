@@ -14,7 +14,7 @@ import { chartVideos } from "../page2/bxh";
 import { MetaDetails } from "../page2/explore-meta";
 import { MoodsList, MoodsList2, MoodsSlug } from "../page2/moods";
 import { initSearchPage } from "../components/search";
-const router = new Navigo("/", { hash: true });
+const router = new Navigo("/");
 const initRouter = async () => {
   const page = document.querySelector("#js-body");
   const homePage = await Home();
