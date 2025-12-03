@@ -57,7 +57,7 @@ const Header = () => {
     ${userSection}
   </header>
 
-  <aside class="bg-black mt-8 flex flex-col justify-start gap-6 fixed top-14 left-0 p-2 w-25 h-full">
+  <aside class="bg-black mt-5 flex flex-col justify-start gap-6 fixed top-14 left-0 p-2 w-25 h-full">
   <a href="/" class="flex flex-col gap-2 items-center p-[20px] w-full hover:bg-gray-700 rounded">
     <i class="fa-solid fa-house fa-lg text-white mb-1"></i>
     <span class="text-[10px] text-white">Trang chủ</span>
@@ -172,12 +172,10 @@ export const refreshToken = async () => {
 //     document.body.appendChild(modal);
 //   }
 
-//   // Toggle modal
 //   profileUser.addEventListener("click", () => {
 //     modal.classList.toggle("hidden");
 //   });
 
-//   // Đóng modal khi click ra ngoài
 //   document.addEventListener("click", (e) => {
 //     if (!modal.contains(e.target) && e.target !== profileUser) {
 //       modal.classList.add("hidden");
@@ -186,24 +184,37 @@ export const refreshToken = async () => {
 // };
 
 
-// export const Search = async ({ q, limit = 20, page = 1 }) => {
-//   if (!q) return { total: 0, results: [] };
+export const Search = async ({ q, limit = 20, page = 1 }) => {
+  if (!q) return { total: 0, results: [] };
 
-//   try {
-//     const response = await axiosInstance.get(`/search`, {
-//       params: { q, limit, page }
-//     });
-//     return response.data; 
-//   } catch (error) {
-//     console.error(error);
-//     return { total: 0, results: [] };
-//   }
-// };
+  try {
+    const response = await axiosInstance.get(`/search`, {
+      params: { q, limit, page }
+    });
+    return response.data; 
+  } catch (error) {
+    console.error(error);
+    return { total: 0, results: [] };
+  }
+};
 
-// const addSearchEvent = () => {
-//   const searchEl = document.querySelector(".js-search")
-//   searchEl.addEventListener("input", async (e) => {
-//     const value = e.target.value
-//     const data = await Search({ q: value, limit: 10, page: 1 })
-//   })
-// }
+export const addSearchEvent = () => {
+  const searchEl = document.querySelector(".js-search")
+  searchEl.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      const value = e.target.value.trim();
+      if (value) {
+        window.location.href = `/search?q=${encodeURIComponent(value)}`;
+      }
+    }
+  });
+}
+export const initMenuToggle = () => {
+  const openMenuBtn = document.getElementById("openMenu");
+  const sidebar = document.getElementById("sidebar");
+  if (!openMenuBtn || !sidebar) return;
+
+  openMenuBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("-translate-x-full"); 
+  });
+};

@@ -144,7 +144,7 @@ export const getMoods = async () => {
     const response = await axiosInstance.get("/moods");
     return response.data;
   } catch (error) {
-    console.error("Lỗi khi lấy dữ liệu List:", error);
+    console.error(error);
   }
 };
 

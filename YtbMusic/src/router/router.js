@@ -13,6 +13,7 @@ import { exploreMusic } from "../page2/new-music";
 import { chartVideos } from "../page2/bxh";
 import { MetaDetails } from "../page2/explore-meta";
 import { MoodsList, MoodsList2, MoodsSlug } from "../page2/moods";
+import { initSearchPage } from "../components/search";
 const router = new Navigo("/", { hash: true });
 const initRouter = async () => {
   const page = document.querySelector("#js-body");
@@ -80,6 +81,10 @@ const initRouter = async () => {
       const htmlAlbums = await LineAlbums(slug)
       const htmlVideos = await LineVideos(slug)
       page.innerHTML = html + htmlDetails + htmlAlbums + htmlVideos;
+    })
+    .on("/search", () => {
+      page.innerHTML = `<div class="js-search-results mt-24 px-6"></div>`
+      initSearchPage()
     })
     .on("/albums/details/:slug", async (params) => {
       const slug = params.data.slug;
