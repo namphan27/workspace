@@ -4,13 +4,17 @@ import { LogOutAccount } from "./components/login.js";
 import initRouter from "./router/router.js";
 
 const render = async () => {
-  const root = document.querySelector("#root")
+  const root = document.querySelector("#root");
   root.innerHTML = await App();
-  initMenuToggle()
-  addSearchEvent()
-  LogOutAccount()
+  initMenuToggle();
+  addSearchEvent();
+  LogOutAccount();
 };
 
-await render();
+const run = async () => {
+  await render();
 
-await initRouter()
+  await initRouter();
+};
+
+run();
