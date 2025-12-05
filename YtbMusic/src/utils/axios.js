@@ -19,6 +19,11 @@ axiosInstance.interceptors.response.use(
         return response; 
     },
     async (error) => {
+        if (error.config?.url.includes("/auth/refresh-token")) {
+            LogOutAccount();
+            return;
+        }
+        
         if (error.response && error.response.status === 401) {
             const newToken = await refreshToken() 
             if (!newToken) {

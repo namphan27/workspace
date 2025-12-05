@@ -72,7 +72,6 @@ export const initApp = () => {
     playTrack(random);
   };
 
-  // Event listeners
   audio.addEventListener("timeupdate", updateTime);
   audio.addEventListener("ended", playNext);
   audio.addEventListener("loadedmetadata", updateTime);

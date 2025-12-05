@@ -79,7 +79,7 @@ const Header = () => {
   </a>
 </aside>
 <aside id="sidebar" 
-  class="fixed top-12 left-0 w-48 h-full mt-8 bg-black p-2 flex flex-col gap-6 transform -translate-x-full transition-transform duration-300 z-50 border-r border-r-gray-500">
+  class="fixed top-12 left-0 w-[200px] h-full mt-8 bg-black p-2 flex flex-col gap-6 transform -translate-x-full transition-transform duration-300 z-50 border-r border-r-gray-500">
 
   <a href="/" class="flex gap-3 ml-1 items-center p-3 w-full hover:bg-gray-700 rounded">
     <i class="fa-solid fa-house fa-lg text-white mb-1"></i>
